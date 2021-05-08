@@ -2,58 +2,18 @@
 	export const prerender = true;
 </script>
 
-<script lang="ts">
-	import Counter from '$lib/Counter/index.svelte';
-</script>
-
 <svelte:head>
-	<title>Home</title>
+	<title>Supabase Cookbook</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
+<div class="flex flex-col lg:items-center pt-48 px-5 text-gray-800">
+	<h1 class="text-5xl lg:text-center lg:leading-tight font-extrabold max-w-prose prose-lg">
+		Supabase Cheatsheet
 	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+</div>
+<div class="prose max-w-prose mx-auto p-4 mt-40">
+	<h2>Getting Started</h2>
+	<ul>
+		<li><a href="/docs/getting-started/postgres">PostgreSQL</a></li>
+	</ul>
+</div>
