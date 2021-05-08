@@ -3,6 +3,10 @@
 	import '../app.css';
 </script>
 
+<svelte:head>
+	<title>Supabase Cookbook</title>
+</svelte:head>
+
 <div class="div flex flex-col max-h-screen">
 	<div class="w-full border-b shadow-sm p-4 flex items-center">
 		<a class="font-semibold text-gray-700" href="/">Supabase Cheatsheet</a>

@@ -2,10 +2,6 @@
 	export const prerender = true;
 </script>
 
-<svelte:head>
-	<title>Supabase Cookbook</title>
-</svelte:head>
-
 <div class="flex flex-col lg:items-center pt-20 px-5 text-gray-800">
 	<h1 class="text-5xl lg:text-center lg:leading-tight font-bold max-w-prose prose-lg">
 		Supabase Cheatsheet
@@ -18,20 +14,19 @@
 	</div>
 </div>
 <div class="prose max-w-prose mx-auto p-4 mt-5">
-	<h2><a href="/docs/getting-started">Getting Started</a></h2>
-	<ul>
-		<li><a href="/docs/getting-started/connect">Connect to Supabase</a></li>
-	</ul>
 
-	<h2><a href="/docs/sql">SQL Basics</a></h2>
-	<ul>
-		<li><a href="/docs/sql/relational-model">Relational Model</a></li>
-		<li><a href="/docs/sql/query-execution-order">Query Execution Order</a></li>
-	</ul>
+## [Getting Started](/docs/getting-started)
 
-	<h2>Auth</h2>
-	<ul>
-		<li><a href="/docs/auth/">Authentication</a></li>
-		<li><a href="/docs/auth/svelte">Usage with Svelte</a></li>
-	</ul>
+- [Connect to Supabase](/docs/getting-started/database-connection)
+
+## [SQL Basics](/docs/sql)
+
+- [Relational Model](/docs/sql/relational-model)
+- [Query Execution Order](/docs/sql/query-execution-order)
+
+## Auth
+
+- [Authentication](/docs/auth)
+- [Usage with Svelte](/docs/auth/svelte)
+
 </div>
