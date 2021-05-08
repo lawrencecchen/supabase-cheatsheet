@@ -10,7 +10,7 @@
 	<h1 class="text-5xl lg:text-center lg:leading-tight font-bold max-w-prose prose-lg">
 		Supabase Cheatsheet
 	</h1>
-	<div class="mt-10 text-gray-800 text-sm space-y-2">
+	<div class="mt-10 text-gray-600 text-sm space-y-2">
 		<p>Cheatsheets & copy-paste recipes to quickly get started with Supabase and PostgreSQL.</p>
 		<p>⚠️ This is a VERY new project - contributions are welcome!</p>
 	</div>

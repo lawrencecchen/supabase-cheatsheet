@@ -1,6 +1,6 @@
-# Auth
+# Public Profiles Table
 
-The built in `auth.users` table is private. To store public user data, create a table (`profiles`) in the `public` schema and attach a [trigger procedure](https://www.postgresql.org/docs/9.2/plpgsql-trigger.html). This will automatically sync `auth.users` with `public.profiles`.
+The built in `auth.users` table is private. To store public user data, create a table (`profiles`) in the `public` schema and attach a [trigger procedure](https://www.postgresql.org/docs/9.2/plpgsql-trigger.html). This will automatically sync the `auth.users` table with `public.profiles`.
 
 Since `public.profiles` is public, ensure that it doesn't contain any private information.
 
