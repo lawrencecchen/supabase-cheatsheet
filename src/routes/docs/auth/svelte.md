@@ -1,4 +1,4 @@
-# Using Supabase auth with Svelte
+# Using Supabase Auth with Svelte
 
 Store Supabase's authentication state in a Svelte [readable store](https://svelte.dev/tutorial/readable-stores).
 
