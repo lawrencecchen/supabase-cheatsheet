@@ -17,6 +17,7 @@
 
 ## [Getting Started](/docs/getting-started)
 
+- [Learn PostgreSQL](/docs/getting-started/learn-postgresql)
 - [Connect to Supabase](/docs/getting-started/database-connection)
 
 ## [SQL Basics](/docs/sql)
@@ -24,9 +25,11 @@
 - [Relational Model](/docs/sql/relational-model)
 - [Query Execution Order](/docs/sql/query-execution-order)
 
-## Auth
+## [Auth](/docs/auth)
 
-- [Authentication](/docs/auth)
+- [API Keys](/docs/auth/api-keys)
+- [Row Security Policies](/docs/auth/row-security-policies)
+- [Public Profiles Table](/docs/auth/public-profiles-table)
 - [Usage with Svelte](/docs/auth/svelte)
 
 </div>
