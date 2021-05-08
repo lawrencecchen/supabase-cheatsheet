@@ -19,7 +19,7 @@
 		return {
 			error: new Error(message)
 		};
-	}
+	};
 </script>
 
 <script lang="ts">
@@ -38,7 +38,7 @@
 	async function patch(res: Response) {
 		const todo = await res.json();
 
-		todos = todos.map(t => {
+		todos = todos.map((t) => {
 			if (t.uid === todo.uid) return todo;
 			return t;
 		});
@@ -52,42 +52,65 @@
 <div class="todos">
 	<h1>Todos</h1>
 
-	<form class="new" action="/todos.json" method="post" use:enhance={{
-		result: async (res, form) => {
-			const created = await res.json();
-			todos = [...todos, created]
+	<form
+		class="new"
+		action="/todos.json"
+		method="post"
+		use:enhance={{
+			result: async (res, form) => {
+				const created = await res.json();
+				todos = [...todos, created];
 
-			form.reset();
-		}
-	}}>
-		<input name="text" placeholder="+ tap to add a todo">
+				form.reset();
+			}
+		}}
+	>
+		<input name="text" aria-label="Add todo" placeholder="+ tap to add a todo" />
 	</form>
 
 	{#each todos as todo (todo.uid)}
-		<div class="todo" class:done={todo.done} transition:scale|local={{start:0.7}} animate:flip={{duration:200}}>
-			<form action="/todos/{todo.uid}.json?_method=patch" method="post" use:enhance={{
-				pending: (data) => {
-					todo.done = !!data.get('done');
-				},
-				result: patch
-			}}>
-				<input type="hidden" name="done" value={todo.done ? '' : 'true'}>
-				<button class="toggle" aria-label="Mark todo as {todo.done ? 'not done' : 'done'}"/>
+		<div
+			class="todo"
+			class:done={todo.done}
+			transition:scale|local={{ start: 0.7 }}
+			animate:flip={{ duration: 200 }}
+		>
+			<form
+				action="/todos/{todo.uid}.json?_method=patch"
+				method="post"
+				use:enhance={{
+					pending: (data) => {
+						todo.done = !!data.get('done');
+					},
+					result: patch
+				}}
+			>
+				<input type="hidden" name="done" value={todo.done ? '' : 'true'} />
+				<button class="toggle" aria-label="Mark todo as {todo.done ? 'not done' : 'done'}" />
 			</form>
 
-			<form class="text" action="/todos/{todo.uid}.json?_method=patch" method="post" use:enhance={{
-				result: patch
-			}}>
-				<input type="text" name="text" value={todo.text}>
-				<button class="save" aria-label="Save todo"/>
+			<form
+				class="text"
+				action="/todos/{todo.uid}.json?_method=patch"
+				method="post"
+				use:enhance={{
+					result: patch
+				}}
+			>
+				<input aria-label="Edit todo" type="text" name="text" value={todo.text} />
+				<button class="save" aria-label="Save todo" />
 			</form>
 
-			<form action="/todos/{todo.uid}.json?_method=delete" method="post" use:enhance={{
-				result: () => {
-					todos = todos.filter(t => t.uid !== todo.uid);
-				}
-			}}>
-				<button class="delete" aria-label="Delete todo"/>
+			<form
+				action="/todos/{todo.uid}.json?_method=delete"
+				method="post"
+				use:enhance={{
+					result: () => {
+						todos = todos.filter((t) => t.uid !== todo.uid);
+					}
+				}}
+			>
+				<button class="delete" aria-label="Delete todo" />
 			</form>
 		</div>
 	{/each}
@@ -110,7 +133,7 @@
 	}
 
 	input:focus-visible {
-		box-shadow: inset 1px 1px 6px rgba(0,0,0,0.1);
+		box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.1);
 		border: 1px solid #ff3e00 !important;
 		outline: none;
 	}
@@ -120,7 +143,7 @@
 		width: 100%;
 		padding: 0.5em 1em 0.3em 1em;
 		box-sizing: border-box;
-		background: rgba(255,255,255,0.05);
+		background: rgba(255, 255, 255, 0.05);
 		border-radius: 8px;
 		text-align: center;
 	}
@@ -134,16 +157,15 @@
 		padding: 0.5rem;
 		background-color: white;
 		border-radius: 8px;
-		filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+		filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
 		transform: translate(-1px, -1px);
 		transition: filter 0.2s, transform 0.2s;
 	}
 
-
 	.done {
 		transform: none;
 		opacity: 0.4;
-		filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.1));
+		filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.1));
 	}
 
 	form.text {
@@ -169,7 +191,7 @@
 	}
 
 	button.toggle {
-		border: 1px solid rgba(0,0,0,0.2);
+		border: 1px solid rgba(0, 0, 0, 0.2);
 		border-radius: 50%;
 		box-sizing: border-box;
 		background-size: 1em auto;
@@ -184,7 +206,8 @@
 		opacity: 0.2;
 	}
 
-	.delete:hover {
+	.delete:hover,
+	.delete:focus {
 		transition: opacity 0.2s;
 		opacity: 1;
 	}
@@ -196,7 +219,8 @@
 		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 2H3.5C2.67158 2 2 2.67157 2 3.5V20.5C2 21.3284 2.67158 22 3.5 22H20.5C21.3284 22 22 21.3284 22 20.5V3.5C22 2.67157 21.3284 2 20.5 2Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M17 2V11H7.5V2H17Z' fill='white' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M13.5 5.5V7.5' stroke='%23676778' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M5.99844 2H18.4992' stroke='%23676778' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
 	}
 
-	.todo input:focus + .save {
+	.todo input:focus + .save,
+	.save:focus {
 		transition: opacity 0.2s;
 		opacity: 1;
 	}
