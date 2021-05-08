@@ -12,6 +12,8 @@ Since `public.profiles` is public, ensure that it doesn't contain any private in
 
 ## Example Table Definition for `profiles`
 
+_This query is named "User Management Starter" under the SQL "Quick start" in the Supabase dashboard._
+
 ```sql
 -- Create a table for Public Profiles
 create table public.profiles (

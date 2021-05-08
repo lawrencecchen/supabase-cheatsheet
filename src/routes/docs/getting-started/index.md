@@ -2,7 +2,7 @@
 
 ## Learn PostgreSQL
 
-You don't need to know any database administration if you use Supabase. This is one of the main selling point -- connection pooling, creating roles, and backups are built into Supabase. Common tasks such as managing extensions all have a GUI on the Supabase dashboard, and there are already sensible defaults.
+You don't need to know any database administration if you use Supabase. This is one of the main selling points -- connection pooling, creating roles, and backups are built into Supabase. Common tasks such as managing extensions all have a GUI on the Supabase dashboard, and there are already sensible defaults.
 
 While the Supabase clients libraries can quickly get you started on a project, you'll need to know SQL to take advantage of indexing, views, recursive CTEs, triggers, stored procedures, and much more. At the minimum, you'll need a basic understanding of data modeling in SQL.
 

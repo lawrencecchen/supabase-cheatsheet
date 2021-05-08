@@ -11,7 +11,9 @@
 		Supabase Cheatsheet
 	</h1>
 	<div class="mt-10 text-gray-600 text-sm space-y-2">
-		<p>Cheatsheets & copy-paste recipes to quickly get started with Supabase and PostgreSQL.</p>
+		<p>
+			Quick references & copy-paste recipes to quickly get started with Supabase and PostgreSQL.
+		</p>
 		<p>⚠️ This is a VERY new project - contributions are welcome!</p>
 	</div>
 </div>
@@ -20,7 +22,7 @@
 
 	<h2 class="a" href="/docs/sql">SQL Basics</h2>
 	<ul>
-		<li><a href="/docs/sql/data-modeling">Data Modeling</a></li>
+		<li><a href="/docs/sql/relational-model">Relational Model</a></li>
 	</ul>
 
 	<h2>Auth</h2>

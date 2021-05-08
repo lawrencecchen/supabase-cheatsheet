@@ -1,6 +1,6 @@
 # Using Supabase Auth with Svelte
 
-Store Supabase's authentication state in a Svelte [readable store](https://svelte.dev/tutorial/readable-stores).
+Store your Supabase authentication state in a Svelte [readable store](https://svelte.dev/tutorial/readable-stores).
 
 `lib/stores/auth.ts`
 
@@ -31,7 +31,7 @@ export const user = derived<Readable<AuthSession>, AuthUser>(auth, ($auth) => $a
 
 ## Accessing Authentication State
 
-It's just a Svelte store. Don't forget the `$` signs.
+It's just a Svelte store. Don't forget the `$` sign.
 
 ```html
 <script lang="ts">
