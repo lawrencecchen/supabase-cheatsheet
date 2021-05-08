@@ -19,10 +19,14 @@
 </div>
 <div class="prose max-w-prose mx-auto p-4 mt-5">
 	<h2><a href="/docs/getting-started">Getting Started</a></h2>
+	<ul>
+		<li><a href="/docs/getting-started/connect">Connect to Supabase</a></li>
+	</ul>
 
-	<h2 class="a" href="/docs/sql">SQL Basics</h2>
+	<h2><a href="/docs/sql">SQL Basics</a></h2>
 	<ul>
 		<li><a href="/docs/sql/relational-model">Relational Model</a></li>
+		<li><a href="/docs/sql/query-execution-order">Query Execution Order</a></li>
 	</ul>
 
 	<h2>Auth</h2>

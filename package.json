@@ -28,12 +28,15 @@
 		"rehype-autolink-headings": "^5.0.1",
 		"rehype-slug": "^4.0.1",
 		"remark-abbr": "^1.4.1",
+		"remark-code-extra": "^1.0.1",
+		"remark-code-frontmatter": "^1.0.0",
 		"remark-github": "^10.0.1",
 		"svelte": "^3.34.0",
 		"svelte-preprocess": "^4.7.1",
 		"tailwindcss": "^2.1.1",
 		"tslib": "^2.0.0",
-		"typescript": "^4.0.0"
+		"typescript": "^4.0.0",
+		"unist-util-visit": "^3.0.1"
 	},
 	"type": "module",
 	"dependencies": {
