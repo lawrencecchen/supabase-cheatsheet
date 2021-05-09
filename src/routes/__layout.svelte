@@ -11,7 +11,7 @@
 <svelte:window bind:scrollY={y} />
 <div>
 	<div
-		class="w-full px-4 py-3 flex items-center fixed top-0 backdrop-filter backdrop-blur-sm backdrop-contrast-200 firefox:bg-opacity-95 firefox:bg-white z-10 transition duration-300 {y >
+		class="w-full px-4 py-3 flex items-center fixed top-0 backdrop-filter backdrop-blur firefox:bg-opacity-95 firefox:bg-white z-10 transition duration-300 {y >
 		0
 			? 'border-b shadow-sm'
 			: ''}"
