@@ -1,4 +1,4 @@
-## Learn PostgreSQL
+# Learn PostgreSQL
 
 You don't need to know any database administration if you use Supabase. This is one of the main selling points -- connection pooling, creating roles, and backups are built into Supabase. Common tasks such as managing extensions all have a GUI on the Supabase dashboard, and there are already sensible defaults.
 
