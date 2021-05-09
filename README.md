@@ -2,4 +2,4 @@
 
 Quick references & copy-paste recipes to quickly get started with Supabase and PostgreSQL.
 
-supabase-cheatsheet.vercel.app
+[https://supabase-cheatsheet.vercel.app](https://supabase-cheatsheet.vercel.app)
