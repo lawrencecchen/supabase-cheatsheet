@@ -11,7 +11,7 @@ module.exports = {
 				repository: 'https://github.com/lawrencecchen/supabase-cheatsheet'
 			})
 		],
-		// require('remark-code-frontmatter'),
+		require('remark-code-frontmatter'),
 		// () => async (tree) => {
 		// 	const { visit } = await import('unist-util-visit');
 		// 	console.log(visit);

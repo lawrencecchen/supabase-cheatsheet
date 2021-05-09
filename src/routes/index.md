@@ -15,17 +15,20 @@
 </div>
 <div class="prose max-w-prose mx-auto p-4 mt-5">
 
-## [Getting Started](/docs/getting-started)
+## Getting Started
 
 - [Learn PostgreSQL](/docs/getting-started/learn-postgresql)
 - [Connect to Supabase](/docs/getting-started/database-connection)
 
-## [SQL Basics](/docs/sql)
+## SQL Basics
 
+- [Why SQL?](/docs/sql/why-sql)
+- [Data Definition Language](/docs/sql/data-definition-language)
+- [Queries](/docs/sql/query)
 - [Relational Model](/docs/sql/relational-model)
 - [Query Execution Order](/docs/sql/query-execution-order)
 
-## [Auth](/docs/auth)
+## Auth
 
 - [API Keys](/docs/auth/api-keys)
 - [Row Security Policies](/docs/auth/row-security-policies)

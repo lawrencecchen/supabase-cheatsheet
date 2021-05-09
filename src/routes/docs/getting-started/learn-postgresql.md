@@ -22,4 +22,4 @@ Other helpful resources:
 
 ## Next Steps
 
-[SQL Basics](/docs/sql)
+[Connect to Supabase](/docs/gtting-started/database-connection)

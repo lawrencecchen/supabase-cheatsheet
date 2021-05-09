@@ -30,6 +30,7 @@
 		"remark-abbr": "^1.4.1",
 		"remark-code-extra": "^1.0.1",
 		"remark-code-frontmatter": "^1.0.0",
+		"remark-custom-blocks": "^2.5.1",
 		"remark-github": "^10.0.1",
 		"svelte": "^3.34.0",
 		"svelte-preprocess": "^4.7.1",
