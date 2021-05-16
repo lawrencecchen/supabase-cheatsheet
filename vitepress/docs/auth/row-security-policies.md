@@ -2,4 +2,3 @@
 
 TODO
 https://www.postgresql.org/docs/current/ddl-rowsecurity.html
-https://postgrest.org/en/stable/auth.html
