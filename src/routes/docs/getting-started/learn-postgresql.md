@@ -19,6 +19,7 @@ Other helpful resources:
 - https://use-the-index-luke.com/
 - https://modern-sql.com/
 - https://supabase.io/docs
+- http://postgresguide.com/
 
 ## Next Steps
 
