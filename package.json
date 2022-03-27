@@ -1,0 +1,29 @@
+{
+  "name": "supabase-cheatsheet",
+  "version": "0.1.0",
+  "description": "Cheatsheets for anyone starting with Supabase + PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawrencecchen/supabase-cheatsheet.git"
+  },
+  "keywords": [
+    "supabase",
+    "sql",
+    "guides"
+  ],
+  "author": "Lawrence Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lawrencecchen/supabase-cheatsheet/issues"
+  },
+  "homepage": "https://github.com/lawrencecchen/supabase-cheatsheet#readme",
+  "devDependencies": {
+    "vitepress": "^0.22.3"
+  }
+}
