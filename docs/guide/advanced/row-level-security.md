@@ -10,17 +10,13 @@ This is the default setting for functions. The function will be executed with th
 
 ## `SECURITY DEFINER`
 
-This is the default setting for views.
+This is the default setting for views. By default, the user that creates a function becomes the owner of the function.
 
-By default, the user that creates a function becomes the owner of the function.
-
-Currently, views can only be `SECURITY DEFINER`.
-
-In PostgreSQL versions <15,
+**Currently, views can only be `SECURITY DEFINER`.** In PostgreSQL versions 15 (which has not yet been released), views can be set as `SECURITY INVOKER`, making row level security much more straightworward.
 
 ## Resources
 
-- https://www.cybertec-postgresql.com/en/abusing-security-definer-functions/#:~:text=By%20default%2C%20PostgreSQL%20functions%20are,user%20had%20executed%20them%20directly.
+- https://www.cybertec-postgresql.com/en/abusing-security-definer-functions/
 - https://www.depesz.com/2022/03/22/waiting-for-postgresql-15-add-support-for-security-invoker-views/
 - https://www.postgresql.org/message-id/b66dd6d6-ad3e-c6f2-8b90-47be773da240%40cybertec.at
 - https://www.postgresql.org/docs/current/sql-createfunction.html

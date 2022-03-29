@@ -16,6 +16,7 @@ export default defineConfig({
       // '/config/': getConfigSidebar(),
       "/": getGuideSidebar(),
     },
+    // nav: [{ text: "Guide", link: "/", activeMatch: "^/$|^/guide/" }],
   },
 });
 
@@ -51,6 +52,31 @@ function getGuideSidebar() {
           link: "/guide/advanced/row-level-security",
         },
       ],
+    },
+    {
+      text: "Frameworks",
+      children: [
+        {
+          text: "Next.js",
+          link: "/guide/frameworks/next-js",
+        },
+        {
+          text: "Remix.run",
+          link: "/guide/frameworks/remix-run",
+        },
+        {
+          text: "SvelteKit",
+          link: "/guide/frameworks/sveltekit",
+        },
+        {
+          text: "Solid Start",
+          link: "/guide/frameworks/solid-start",
+        },
+      ],
+    },
+    {
+      text: "Awesome Supabase",
+      link: "/guide/awesome-supabase",
     },
   ];
 }
