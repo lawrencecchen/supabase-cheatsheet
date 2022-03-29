@@ -31,8 +31,12 @@ function getGuideSidebar() {
           link: "/guide/basic/database-connection",
         },
         {
-          text: "Learn SQL",
-          link: "/guide/basic/sql/learn-sql",
+          text: "SQL/Supabase in X Minutes",
+          link: "/guide/basic/sql/sql-supabase-in-x-minutes",
+        },
+        {
+          text: "In Depth SQL",
+          link: "/guide/basic/sql/in-depth-sql",
           children: [
             { text: "psql intro", link: "/guide/basic/sql/psql" },
             { text: "psql commands", link: "/guide/basic/sql/psql-commands" },

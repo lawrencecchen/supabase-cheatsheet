@@ -1,4 +1,6 @@
-# Why SQL?
+# In Depth SQL
+
+## Why SQL?
 
 SQL is a declarative query language. It is a language that transforms your data into a format that is more convenient for your application to handle. Unlike NoSQL paradigms, the way you access data is separate from the way you store data.
 
