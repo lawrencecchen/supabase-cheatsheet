@@ -12,11 +12,11 @@ npm install @supabase/supabase-js
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-//or
+<!-- or -->
 <script src="https://unpkg.com/@supabase/supabase-js"></script>
 ```
 
-### [Initialize a Client](https://supabase.com/docs/reference/javascript/initializing)
+### [Client Initialization](https://supabase.com/docs/reference/javascript/initializing)
 
 ```js
 // supabase.js
@@ -31,11 +31,9 @@ import { supabase } from "./supabase.js";
 const { data, error } = await supabase.from("...");
 ```
 
-## DDL (Data definition language)
+## [DDL (Data definition language)](https://www.postgresql.org/docs/current/ddl.html)
 
-DDL is used to determine the structure of your database.
-
-- https://www.postgresql.org/docs/current/ddl.html
+DDL determines your database's structure. These commands aren't present in client libraries (like `@supabase/supabase-js`). You'll also typically use the default database/schema that Supabase provides.
 
 ```sql
 -- Comments start with two hyphens. End each command with a semicolon.
@@ -53,7 +51,6 @@ drop database my_database;
 -- List available databases.
 show databases;
 
-
 -- In Supabase, the stuff you make is in the `public` schema. There's also an
 -- `auth` schema and `storage` schema. PostgREST exposes everything in the
 -- `public` schema as a public API.
@@ -67,15 +64,15 @@ create table posts (
 );
 
 -- Common data types:
--- - integer
--- - serial (auto-incrementing integer)
--- - boolean
--- - date
--- - time
--- - uuid
--- - json
--- - jsonb
--- - ... https://www.postgresql.org/docs/14/datatype.html
+-- integer
+-- serial (auto-incrementing integer)
+-- boolean
+-- date
+-- time
+-- uuid
+-- json
+-- jsonb
+-- ... https://www.postgresql.org/docs/14/datatype.html
 
 -- DROP deletes the table skeleton as well as the data within.
 drop table posts;
@@ -84,64 +81,75 @@ drop table posts;
 truncate table posts;
 ```
 
-## DML (Data manipulation language)
+## [DML (Data manipulation language)](https://www.postgresql.org/docs/current/dml.html)
+
+Now it is time to fill the tables with data. You'll need to insert, update, and delete table data to make a CRUD app.
 
 ```sql
 insert into posts values (1, 'Ant', 'Hello, world!');
 insert into posts values (2, 'awalias', 'Helloo, world!');
--- JS:
 -- const { data, error } = await supabase.from("posts").insert([
 --   { id: 1, author: "Ant", content: "Hello, world!" },
 --   { id: 2, author: "awalias", content: "Hello, world!" },
 -- ]);
 
 select * from posts; -- select all from posts
--- JS:
 -- const { data, error } = await supabase.from('posts').select('*');
-
--- Result:
+-- Output:
 -- | "id" | "author"  | "content"        |
 -- |------|-----------|------------------|
 -- | 1    | "Ant"     | "Hello, world!"  |
 -- | 2    | "awalias" | "Helloo, world!" |
 
 select author, content from posts;
--- JS:
 -- const { data, error } = await supabase.from('posts').select('author, content');
-
--- Result:
+-- Output:
 -- | "author"  | "content"        |
 -- |-----------|------------------|
 -- | "Ant"     | "Hello, world!"  |
 -- | "awalias" | "Helloo, world!" |
 
 select * from posts where id = 2;
--- JS:
 -- const { data, error } = await supabase
 --   .from("posts")
 --   .select("*")
 --   .match({ id: 2 });
-
--- Result:
+-- Output:
 -- | "id" | "author"  | "content"        |
 -- |------|-----------|------------------|
 -- | 2    | "awalias" | "Helloo, world!" |
 
-update posts set content = 'Hello, world!' where id = 1;
+update posts set content = 'Hello, world!', author = 'Paul' where id = 2 returning content; -- omit `returning` to not return anything.
 -- const { data, error } = await supabase
 --   .from('posts')
---   .update({ content: 'Hello, world!' })
---   .match({ id: 1 });
+--   .update({ content: 'Hello, world!', author: 'Paul' })
+--   .match({ id: 2 });
+-- Output:
+-- 'Hello, world!'
 
 select * from posts;
--- JS:
 -- const { data, error } = await supabase.from('posts').select('*');
+-- Output:
+-- | "id" | "author"  | "content"        |
+-- |------|-----------|------------------|
+-- | 1    | "Ant"     | "Hello, world!"  |
+-- | 2    | "awalias" | "Hello, world!"  |
 
--- Result:
+delete from posts where id = 1 returning *;
+-- const { data, error } = await supabase
+--   .from("posts")
+--   .delete({ returning: "representation" })
+--   .match({ id: 1 });
+-- Output:
 -- | "id" | "author"  | "content"        |
 -- |------|-----------|------------------|
 -- | 1    | "Ant"     | "Hello, world!"  |
 -- | 2    | "awalias" | "Hello, world!" |
+```
+
+## Relational Stuff
+
+```sql
 
 ```
 
